@@ -1,0 +1,35 @@
+pinMode(11, OUTPUT);
+}
+void loop() {
+  if(digitalRead(8) == LOW){
+    digitalWrite(13,HIGH);
+    digitalWrite(12,HIGH);
+    digitalWrite(11,HIGH);
+    delay(100);
+    digitalWrite(13,LOW);
+    digitalWrite(12,LOW);
+    digitalWrite(11,LOW);
+    delay(100);
+    digitalWrite(13,HIGH);
+    digitalWrite(12,HIGH);
+    digitalWrite(11,HIGH);
+    delay(100);
+    digitalWrite(13,LOW);
+    digitalWrite(12,LOW);
+    digitalWrite(11,LOW);
+  }else{ 
+    if(analogRead(5)< 600){
+    digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
+    digitalWrite(11,LOW);
+  }else if(analogRead(5)< 800){
+    digitalWrite(13,LOW);
+    digitalWrite(12,HIGH);
+    digitalWrite(11,LOW);
+  }else{
+    digitalWrite(13,LOW);
+    digitalWrite(12,LOW);
+    digitalWrite(11,HIGH);
+  }
+  }
+}
